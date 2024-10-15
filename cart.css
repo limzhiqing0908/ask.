@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+body {
+    background-color: rgb(148, 161, 122);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
+}
+
+html ::-webkit-scrollbar {
+    width: .75rem;
+}
+
+html ::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+html ::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+}
+
+/**/
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.header .main .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1.7rem 2.8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: whitesmoke;
+    background: linear-gradient(135deg, olivedrab, darkgreen);
+    border-radius: 0.5rem;
+}
+
+.header .main .btn:hover{
+    background: linear-gradient(135deg, darkgreen, olivedrab);
+}
+
+.header h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: black;
+}
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+
+.header .shopping img{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    background: whitesmoke;
+    color: black;
+    border-radius: 50%;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.4s ease-out;
+}
+.header .shopping img:hover{
+    background-color: lightgray;
+}
+header .shopping span{
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.list{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    background: whitesmoke;
+    padding: 2rem;
+    border-radius: 3rem;
+    margin: 1.5% 2%;
+}
+.list .item{
+    border-radius: 2rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+.list .item:hover{
+    transform: translateY(-3px);
+}
+.list .item img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.list .item .title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 1rem;
+    font-size: 1.7rem;
+    color: darkgreen;
+}
+.list .item button{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1.7rem 2.8rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: whitesmoke;
+    background: linear-gradient(135deg, olivedrab, darkgreen);
+    border-radius: 0.5rem;
+}
+
+.list .item button:hover{
+    background: linear-gradient(135deg, darkgreen, olivedrab);
+}
+
+.cart{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .cart{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.payment .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: whitesmoke;
+    background: linear-gradient(135deg, black, silver);
+    border-radius: 0.5rem;
+}
+
+.payment .btn:hover{
+    background: linear-gradient(135deg, silver, black);
+}
+.cart h1{
+    color: #E8BC0E;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.cart .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.cart .checkOut div{
+    background-color: #E8BC0E;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cart .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.listCart li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCart li div{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart li img{
+    width: 90%;
+}
+.listCart li button{
+    background-color: #fff5;
+    border: none;
+}
+.listCart .count{
+    margin: 0 10px;
+}
+
+/* responsive starts */
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 53%;
+    }
+    .cart{
+        position: fixed;
+        top:0;
+        left: 100%;
+        width: 450px;
+        background-color: #453E3B;
+        height: 100vh;
+        transition: 0.5s;
+    }
+    .active .cart{
+        left: calc(100% - 450px);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .cart{
+        position: fixed;
+        top:0;
+        left: 100%;
+        width: 400px;
+        background-color: #453E3B;
+        height: 100vh;
+        transition: 0.5s;
+    }
+    .active .cart{
+        left: calc(100% - 400px);
+    }
+}
+
+/* responsive ends */

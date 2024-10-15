@@ -1,0 +1,113 @@
+thanks.css
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("IMAGE/KUIH2.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    position: absolute;
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 6px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: black;
+}
+
+.wrapper img{
+    width: 6rem;
+    margin-top: -3rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2rem 0 .6rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 2.5rem;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: whitesmoke;
+    background: linear-gradient(135deg, black, silver);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.btn:hover{
+    background: linear-gradient(135deg, silver, black);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size:80%;
+    }
+    .wrapper{
+        position: absolute;
+        width: 360px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 6px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 60%;
+    }
+    .wrapper{
+        position: absolute;
+        width: 320px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 6px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: black;
+    }
+}
