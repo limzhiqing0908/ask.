@@ -18,7 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: ("C:\Users\User\Documents\lim zhi qing.img.jpg")no-repeat;
+    background: transparent;
     background-size: cover;
     background-position: center;
 }
